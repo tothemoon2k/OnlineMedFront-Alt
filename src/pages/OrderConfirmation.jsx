@@ -33,14 +33,12 @@ const ThankYouPage = () => {
       <Helmet>
         <script type="text/javascript">
           {`
-            <script>
               gtag('event', 'conversion', {
                   'send_to': 'AW-11511976437/gUmpCMTaxvoZEPWjq_Eq',
                   'value': 1.0,
                   'currency': 'USD',
                   'transaction_id': ''
               });
-            </script>
           `}
         </script>
       </Helmet>
