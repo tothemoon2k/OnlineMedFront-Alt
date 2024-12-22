@@ -25,12 +25,7 @@ const Landing = () => {
                         <div className="flex-shrink-0">
                             <h1 className="text-2xl font-bold text-blue-600">HealthBridge</h1>
                         </div>
-                        <nav className="hidden md:flex space-x-8">
-                            <a href="#how-it-works" className="text-gray-600 hover:text-blue-600">How It Works</a>
-                            <a href="#benefits" className="text-gray-600 hover:text-blue-600">Benefits</a>
-                            <a href="#pricing" className="text-gray-600 hover:text-blue-600">Pricing</a>
-                            <a href="#faq" className="text-gray-600 hover:text-blue-600">FAQ</a>
-                        </nav>
+
                         <button onClick={handleCtaClick} className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                             Get Your Note Now
                         </button>
