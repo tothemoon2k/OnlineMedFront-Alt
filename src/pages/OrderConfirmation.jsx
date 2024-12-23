@@ -146,7 +146,7 @@ const ThankYouPage = () => {
             </p>
             <div className="space-x-4">
               <button
-                onClick={() => window.location.href = 'mailto:support@onlinemed.tech'}
+                onClick={() => window.location.href = 'mailto:support@healthbridgedirect.org'}
                 className="inline-flex items-center text-blue-600 hover:text-blue-700"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

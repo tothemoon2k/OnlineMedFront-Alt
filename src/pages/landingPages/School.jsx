@@ -685,12 +685,12 @@ const School = () => {
                                 Our support team is here to help students and parents 24/7
                             </p>
                             <div className="flex justify-center space-x-6">
-                                <button className="inline-flex items-center text-blue-600 hover:text-blue-700">
+                                <a href= "mailto:support@healthbridgedirect.org" className="inline-flex items-center text-blue-600 hover:text-blue-700">
                                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                     Email Support
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
