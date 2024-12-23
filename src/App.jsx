@@ -1,14 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
-import Landing from "./pages/Landing";
+import General from "./pages/landingPages/General";
+import Work from "./pages/landingPages/Work";
 import OrderConfirmation from "./pages/OrderConfirmation";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<General />} />
+        <Route path="/w" element={<Work />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
       </Routes>
       <Analytics />

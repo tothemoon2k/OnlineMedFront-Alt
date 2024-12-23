@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { track } from '@vercel/analytics';
 
-const Landing = () => {
+const General = () => {
     const reviewAvatars = [
         "https://pbs.twimg.com/profile_images/909523370940780545/UOAjh5Vq_400x400.jpg",
         "https://pbs.twimg.com/profile_images/1783877005832056832/L53JJgMP_400x400.jpg",
@@ -586,4 +586,4 @@ const Landing = () => {
     );
 }
 
-export default Landing;
+export default General;

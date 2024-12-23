@@ -1,5 +1,6 @@
 {
     "routes": [
-      { "src": "/order-confirmation", "dest": "/" }
+      { "src": "/order-confirmation", "dest": "/" },
+      { "src": "/w", "dest": "/" }
     ]
 }
