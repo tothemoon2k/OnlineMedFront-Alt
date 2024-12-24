@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { track } from '@vercel/analytics';
+import docImg from '../../assets/doc4.webp';
 
 const General = () => {
     const reviewAvatars = [
@@ -80,7 +81,7 @@ const General = () => {
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl transform rotate-3"></div>
                             <img
-                                src="https://www.onlinemed.io/assets/doc4.webp"
+                                src={docImg}
                                 alt="Online Doctor Consultation"
                                 className="relative rounded-3xl shadow-xl"
                             />
