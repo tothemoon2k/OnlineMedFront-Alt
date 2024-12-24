@@ -841,4 +841,234 @@ const School = () => {
     );
 }
 
-export default School;
+const DoctorNoteForm = () => {
+    const [currentStep, setCurrentStep] = useState(1);
+    const totalSteps = 4;
+  
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        {/* Progress Bar */}
+        <div className="mb-8">
+          <div className="flex justify-between mb-2">
+            <span className="text-sm font-medium">Easy Steps</span>
+            <span className="text-sm font-medium">{currentStep} of {totalSteps}</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <motion.div
+              className="bg-blue-600 h-2 rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
+            />
+          </div>
+        </div>
+  
+        {/* Step 1: Basic Information */}
+        {currentStep === 1 && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl font-bold text-gray-900">Let's Get Started! 📚</h2>
+            <p className="text-gray-600">Quick info to help us prepare your note</p>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Who is this note for?
+                </label>
+                <div className="mt-2 grid grid-cols-2 gap-4">
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    🎓 For Myself
+                  </button>
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    👨‍👧 For My Child
+                  </button>
+                </div>
+              </div>
+  
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  What type of school?
+                </label>
+                <select className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                  <option>High School</option>
+                  <option>College/University</option>
+                  <option>Middle School</option>
+                  <option>Elementary School</option>
+                </select>
+              </div>
+            </div>
+          </motion.div>
+        )}
+  
+        {/* Step 2: Absence Details */}
+        {currentStep === 2 && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl font-bold text-gray-900">Quick Details 📅</h2>
+            <p className="text-gray-600">Help us understand the absence</p>
+  
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  When was/will the absence be?
+                </label>
+                <div className="mt-2 grid grid-cols-2 gap-4">
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    📅 Single Day
+                  </button>
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    📅 Multiple Days
+                  </button>
+                </div>
+              </div>
+  
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Select the main symptoms (choose all that apply)
+                </label>
+                <div className="mt-2 grid grid-cols-2 gap-3">
+                  {[
+                    "🤒 Fever",
+                    "🤧 Cold/Flu",
+                    "🤢 Stomach Issues",
+                    "😴 Fatigue",
+                    "🤕 Headache",
+                    "😷 Other"
+                  ].map((symptom) => (
+                    <button
+                      key={symptom}
+                      className="p-3 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500 text-left"
+                    >
+                      {symptom}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+  
+        {/* Step 3: Basic Medical History */}
+        {currentStep === 3 && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl font-bold text-gray-900">Quick Health Check ⚕️</h2>
+            <p className="text-gray-600">Standard medical questions (required by law)</p>
+  
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Are you currently taking any medications?
+                </label>
+                <div className="mt-2 grid grid-cols-2 gap-4">
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    No
+                  </button>
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    Yes
+                  </button>
+                </div>
+              </div>
+  
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Any chronic medical conditions?
+                </label>
+                <div className="mt-2 grid grid-cols-2 gap-4">
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    No
+                  </button>
+                  <button className="p-4 border rounded-lg hover:bg-blue-50 focus:ring-2 focus:ring-blue-500">
+                    Yes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+  
+        {/* Step 4: Contact & Delivery */}
+        {currentStep === 4 && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl font-bold text-gray-900">Almost Done! 🎉</h2>
+            <p className="text-gray-600">Where should we send your note?</p>
+  
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Email for delivery
+                </label>
+                <input
+                  type="email"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  placeholder="your@email.com"
+                />
+              </div>
+  
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Phone number (for verification only)
+                </label>
+                <input
+                  type="tel"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+  
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="font-medium text-blue-800">Your note will include:</h3>
+                <ul className="mt-2 text-sm text-blue-600 space-y-1">
+                  <li>✓ Doctor's signature</li>
+                  <li>✓ Official letterhead</li>
+                  <li>✓ Verification contact</li>
+                  <li>✓ Digital & printable versions</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+  
+        {/* Navigation Buttons */}
+        <div className="mt-8 flex justify-between">
+          {currentStep > 1 && (
+            <button
+              onClick={() => setCurrentStep(prev => prev - 1)}
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+            >
+              ← Back
+            </button>
+          )}
+          {currentStep < totalSteps ? (
+            <button
+              onClick={() => setCurrentStep(prev => prev + 1)}
+              className="ml-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            >
+              Continue →
+            </button>
+          ) : (
+            <button
+              onClick={() => {/* Handle submission */}}
+              className="ml-auto px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+            >
+              Get Your Note 🎉
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+export default DoctorNoteForm;
