@@ -14,7 +14,7 @@ const General = () => {
     const handleCtaClick = () => {
         track('cta-click');
 
-        window.location.href = "https://xhj91lsy6tk.typeform.com/to/QN2Efq5t";
+        window.location.href = "/form/w";
     }
 
     return (

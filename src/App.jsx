@@ -4,6 +4,8 @@ import { Analytics } from '@vercel/analytics/react';
 import General from "./pages/landingPages/General";
 import Work from "./pages/landingPages/Work";
 import School from "./pages/landingPages/School";
+import WorkForm from "./pages/form/Work";
+import SchoolForm from "./pages/form/School";
 import OrderConfirmation from "./pages/OrderConfirmation";
 
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="/" element={<General />} />
         <Route path="/w" element={<Work />} />
         <Route path="/s" element={<School />} />
+        <Route path="/form/w" element={<WorkForm />} />
+        <Route path="/form/s" element={<SchoolForm />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
       </Routes>
       <Analytics />
