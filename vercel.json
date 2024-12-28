@@ -4,6 +4,7 @@
       { "src": "/w", "dest": "/" },
       { "src": "/s", "dest": "/" },
       { "src": "/form/w", "dest": "/" },
-      { "src": "/form/s", "dest": "/" }
+      { "src": "/form/s", "dest": "/" },
+      { "src": "/terms", "dest": "/" }
     ]
 }

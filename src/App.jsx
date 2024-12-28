@@ -7,6 +7,7 @@ import School from "./pages/landingPages/School";
 import WorkForm from "./pages/form/Work";
 import SchoolForm from "./pages/form/School";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import Terms from "./pages/Terms";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/form/w" element={<WorkForm />} />
         <Route path="/form/s" element={<SchoolForm />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
       <Analytics />
     </Router>
