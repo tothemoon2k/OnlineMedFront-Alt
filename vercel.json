@@ -5,6 +5,9 @@
       { "src": "/s", "dest": "/" },
       { "src": "/form/w", "dest": "/" },
       { "src": "/form/s", "dest": "/" },
-      { "src": "/terms", "dest": "/" }
+      { "src": "/terms", "dest": "/" },
+      { "src": "/privacy-policy", "dest": "/" },
+      { "src": "/hipaa-consent", "dest": "/" },
+      { "src": "/telehealth-consent", "dest": "/" }
     ]
 }

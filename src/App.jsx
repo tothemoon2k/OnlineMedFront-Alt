@@ -7,7 +7,10 @@ import School from "./pages/landingPages/School";
 import WorkForm from "./pages/form/Work";
 import SchoolForm from "./pages/form/School";
 import OrderConfirmation from "./pages/OrderConfirmation";
-import Terms from "./pages/Terms";
+import Terms from "./pages/legal/Terms";
+import Privacy from "./pages/legal/Privacy";
+import HipaaConsent from "./pages/legal/HipaaConsent";
+import TelehealthConsent from "./pages/legal/TelehealthConsent";
 
 const App = () => {
   return (
@@ -20,6 +23,9 @@ const App = () => {
         <Route path="/form/s" element={<SchoolForm />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/hipaa-consent" element={<HipaaConsent />} />
+        <Route path="/telehealth-consent" element={<TelehealthConsent />} />
       </Routes>
       <Analytics />
     </Router>

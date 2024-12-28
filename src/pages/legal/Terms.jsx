@@ -1,5 +1,5 @@
 import React from 'react';
-import Legal from '../components/Legal';
+import Legal from '../../components/Legal';
 
 const Terms = () => {
     const termsAndConditions = [
@@ -299,7 +299,7 @@ const Terms = () => {
             • Legal Department: legal@healthbridge.clinic
             • Support Team: support@healthbridge.clinic
             • Phone: 1-972-597-0341
-            • Address: 6014 Walnut Loop Rd
+            • Address: 6014 Walnut Loop Rd, Charlotte, NC, 28277
       
             Emergency Contact:
             • For medical emergencies, call 911
@@ -311,7 +311,7 @@ const Terms = () => {
 
     return (
         <div>
-            <Legal documentType='Terms and Conditions' lastUpdated='February 20, 2024' companyName='HealthBridge Direct' companyEmail='legal@healthbridge.clinic' sections={fullTermsAndConditions}/>
+            <Legal documentType='Terms and Conditions' lastUpdated='December 28, 2024' companyName='HealthBridge Direct' companyEmail='legal@healthbridge.clinic' sections={fullTermsAndConditions}/>
         </div>
     );
 };
