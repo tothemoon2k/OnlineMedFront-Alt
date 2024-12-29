@@ -102,7 +102,7 @@ const Work = () => {
                             Get Your Doctor's Note in Minutes, Not Hours
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Fast, easy, and accepted by employers and schools nationwide. 
+                            Fast, easy, and accepted by employers nationwide. 
                         </p>
                     </div>
 
