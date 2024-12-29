@@ -168,7 +168,7 @@ const General = () => {
                                 Save $100+ Today
                             </h3>
                             <p className="text-gray-600">
-                                Just $35 for your note. No insurance needed, no hidden fees, no surprise charges.
+                                Just $35 for your note. Save $100+ over an urgent care visit. No insurance needed, no hidden fees, no surprise charges.
                             </p>
                             <div className="mt-4 text-purple-600 font-semibold">
                                 ✓ Money-Back Guarantee
