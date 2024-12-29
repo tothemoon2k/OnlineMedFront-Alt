@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
-import { Helmet } from "react-helmet";
 
 const ThankYouPage = () => {
   const navigate = useNavigate();
@@ -30,19 +29,6 @@ const ThankYouPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <Helmet>
-        <script type="text/javascript">
-          {`
-              gtag('event', 'conversion', {
-                  'send_to': 'AW-11511976437/gUmpCMTaxvoZEPWjq_Eq',
-                  'value': 1.0,
-                  'currency': 'USD',
-                  'transaction_id': ''
-              });
-          `}
-        </script>
-      </Helmet>
-
       {/* Success Message Section */}
       <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24">
         <div className="text-center">
