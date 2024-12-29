@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { track } from '@vercel/analytics';
 import docImg from '../../assets/doc4.webp';
+import ReviewSection from '../../components/ReviewSection';
 
 const General = () => {
     const reviewAvatars = [
@@ -24,34 +25,31 @@ const General = () => {
         6       <link rel="preload" as="image" href={docImg} />
         7   </Helmet>
             {/* Header */}
-            <header className="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-20">
-                        <div className="flex-shrink-0">
-                            <h1 className="text-2xl font-bold text-blue-600">HealthBridge</h1>
-                        </div>
+            <nav className={`w-full h-10 flex items-center justify-between px-6 md:px-32 py-10`}>
+                <div className='flex gap-6 items-center'>
+                    <a className='text-2xl font-semibold' href="/">HealthBridge</a>
 
-                        <button onClick={handleCtaClick} className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                            Get Your Note Now
-                        </button>
+                    <div className='flex items-center gap-3 font-medium text-lg'>
+                        <a className='' href="/">Home</a>
+                        <a className='' href="/faq">FAQ</a>
                     </div>
                 </div>
-            </header>
+            </nav>
 
             {/* Hero Section - Problem */}
-            <section className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-blue-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="pt-10 pb-20 md:pt-24 md:pb-24 bg-gradient-to-r from-blue-50 to-blue-100">
+                <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl leading-tight">
-                                Need a Doctor's Note <span className="text-blue-600">Without the Hassle?</span>
+                            <h1 className="text-[2.7rem] font-bold text-gray-900 sm:text-5xl md:text-6xl leading-tight">
+                                Get a Verifiable Doctors Note in <span className="text-blue-600">Under 10 Mins</span>
                             </h1>
-                            <p className="mt-6 text-xl text-gray-600 leading-relaxed">
-                                Get a legitimate, verifiable doctor's note in under 10 minutes. No appointment necessary, no waiting rooms, and no expensive urgent care visits.
+                            <p className="mt-6 md:text-lg text-gray-600 leading-relaxed">
+                                Need a doctors note for work or school? We’re here to help. Licensed healthcare providers offering real, verifiable excuse notes for workers and students. Quick, reliable, and hassle-free.
                             </p>
                             <div className="mt-8 flex flex-col sm:flex-row gap-4">
                                 <button onClick={handleCtaClick} className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
@@ -61,7 +59,7 @@ const General = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div className="mt-8 flex items-center space-x-4">
+                            <div className="mt-8 flex items-center space-x-16 md:space-x-4">
                                 <div className="flex -space-x-2">
                                     {reviewAvatars.map((i) => (
                                         <img
@@ -81,7 +79,7 @@ const General = () => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="relative"
+                            className="hidden md:block relative"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl transform rotate-3"></div>
                             <img
@@ -100,105 +98,39 @@ const General = () => {
                 </div>
             </section>
 
-            {/* Trust Indicators */}
-            <section className="py-8 bg-white border-y border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center text-gray-600 mb-8">
-                        <p className="text-sm font-medium uppercase tracking-wide">Trusted By Thousands Of Professionals</p>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                        {/* Updated, more professional badges */}
-                        <div className="flex flex-col items-center">
-                            <div className="bg-blue-50 rounded-full p-3 mb-3">
-                                <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <span className="font-semibold">HIPAA Compliant</span>
-                            <span className="text-sm text-gray-500">Protected Health Info</span>
-                        </div>
-
-                        <div className="flex flex-col items-center">
-                            <div className="bg-green-50 rounded-full p-3 mb-3">
-                                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
-                                </svg>
-                            </div>
-                            <span className="font-semibold">Verified Doctors</span>
-                            <span className="text-sm text-gray-500">Licensed Professionals</span>
-                        </div>
-
-                        <div className="flex flex-col items-center">
-                            <div className="bg-purple-50 rounded-full p-3 mb-3">
-                                <svg className="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <span className="font-semibold">256-bit SSL</span>
-                            <span className="text-sm text-gray-500">Bank-Level Security</span>
-                        </div>
-
-                        <div className="flex flex-col items-center">
-                            <div className="bg-orange-50 rounded-full p-3 mb-3">
-                                <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <span className="font-semibold">24/7 Support</span>
-                            <span className="text-sm text-gray-500">Always Available</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Agitate Section - Pain Points */}
             <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                            Why Stress About Getting a Doctor's Note?
+                            Get Your Doctor's Note in Minutes, Not Hours
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Traditional ways of getting a doctor's note are frustrating, time-consuming, and expensive.
+                            Fast, easy, and accepted by employers and schools nationwide. 
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Pain Point Cards */}
                         <motion.div
-                            className="p-8 bg-red-50 rounded-xl shadow-lg"
+                            className="p-8 bg-blue-50 rounded-xl shadow-lg"
                             whileHover={{ y: -5 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
-                                <svg className="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                                <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold text-red-800 mb-4">
-                                Endless Waiting Rooms
+                            <h3 className="text-xl font-semibold text-blue-800 mb-4">
+                                10-Minute Delivery
                             </h3>
                             <p className="text-gray-600">
-                                Waste hours sitting in waiting rooms when you're already feeling sick, potentially exposing yourself to other illnesses.
+                                Get your doctor's note delivered straight to your inbox in minutes. No appointments, no waiting rooms.
                             </p>
-                        </motion.div>
-
-                        <motion.div
-                            className="p-8 bg-orange-50 rounded-xl shadow-lg"
-                            whileHover={{ y: -5 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6">
-                                <svg className="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                            <div className="mt-4 text-blue-600 font-semibold">
+                                ✓ Lightning Fast Delivery
                             </div>
-                            <h3 className="text-xl font-semibold text-orange-800 mb-4">
-                                Expensive Urgent Care Visits
-                            </h3>
-                            <p className="text-gray-600">
-                                Pay hundreds of dollars for a simple doctor's note, even with insurance. Why spend more than you need to?
-                            </p>
                         </motion.div>
 
                         <motion.div
@@ -208,40 +140,59 @@ const General = () => {
                         >
                             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6">
                                 <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
                             </div>
                             <h3 className="text-xl font-semibold text-green-800 mb-4">
-                                Verification Concerns
+                                Verified & Accepted For Employers and School
                             </h3>
                             <p className="text-gray-600">
-                                Worry about whether your employer will accept the note or question its authenticity.
+                                Notes are accepted by employers and schools nationwide. Includes all required medical verification details.
                             </p>
+                            <div className="mt-4 text-green-600 font-semibold">
+                                ✓ 99.9% Acceptance Rate
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="p-8 bg-purple-50 rounded-xl shadow-lg"
+                            whileHover={{ y: -5 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                                <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-semibold text-purple-800 mb-4">
+                                Save $100+ Today
+                            </h3>
+                            <p className="text-gray-600">
+                                Just $35 for your note. No insurance needed, no hidden fees, no surprise charges.
+                            </p>
+                            <div className="mt-4 text-purple-600 font-semibold">
+                                ✓ Money-Back Guarantee
+                            </div>
                         </motion.div>
                     </div>
 
-                    {/* Customer Quote */}
-                    <div className="mt-16 bg-gray-50 rounded-2xl p-8 md:p-12">
-                        <div className="max-w-3xl mx-auto text-center">
-                            <img src="https://img.icons8.com/material-outlined/200/quote.png" alt="Quote" className="w-12 h-12 mx-auto mb-6" />
-                            <blockquote className="text-xl md:text-2xl text-gray-900 font-medium italic mb-6">
-                                "I was dreading having to sit in a waiting room for hours just to get a doctor's note. HealthBridge saved me so much time and hassle. The process was incredibly easy!"
-                            </blockquote>
-                            <div className="flex items-center justify-center">
-                                <img src="https://pbs.twimg.com/profile_images/1816677293177339908/iw7GzG9o_400x400.jpg" alt="Sarah M." className="w-12 h-12 rounded-full" />
-                                <div className="ml-4 text-left">
-                                    <div className="font-semibold">Josh M.</div>
-                                    <div className="text-gray-600">Verified Customer</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className='w-full flex justify-center mt-4 md:mt-8'>
+                        <button onClick={handleCtaClick} className="w-full md:max-w-lg mt-6 bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                            Start Your Note
+                            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
                     </div>
+
+                    {/* Customer Quote */}
+                    <ReviewSection />
                 </div>
             </section>
 
             {/* How It Works Section */}
             <section className="py-20 bg-gradient-to-b from-white to-blue-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
                             Get Your Doctor's Note in 3 Simple Steps
@@ -717,7 +668,7 @@ const General = () => {
                                 <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                 </svg>
-                                <span className="ml-2 text-gray-600">4.9/5 from 10,000+ reviews</span>
+                                <span className="ml-2 text-gray-600">4.9/5 from 2,847+ reviews</span>
                             </div>
                         </div>
                     </div>
