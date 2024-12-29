@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
+import { Helmet } from 'react-helmet';
 
 const ThankYouPage = () => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const ThankYouPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Success Message Section */}
-      <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24">
+        <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24">
         <div className="text-center">
           <motion.div
             initial={{ scale: 0 }}
@@ -128,7 +129,7 @@ const ThankYouPage = () => {
             className="text-center"
           >
             <p className="text-gray-600 mb-6">
-              Need help? Our support team is available 24/7
+              Need help? Our support team is between 6AM - 8PM EST Daily
             </p>
             <div className="space-x-4">
               <button
@@ -150,6 +151,20 @@ const ThankYouPage = () => {
           <p>&copy; 2023 HealthBridge. All rights reserved.</p>
         </div>
       </footer>
+
+      <Helmet>
+        <script src="https://salesiq.zoho.com/widget" type="text/javascript" defer></script>
+        <script type="text/javascript">
+          {`
+            var $zoho=$zoho || {};
+            $zoho.salesiq = $zoho.salesiq || {
+              widgetcode: "siq5a6cf580d3ad81c6a37caad31055158cd9d3b632df9ee72723236d99d3276ea3",
+              values: {},
+              ready: function(){}
+            };
+          `}
+        </script>
+      </Helmet>
     </div>
   );
 };
