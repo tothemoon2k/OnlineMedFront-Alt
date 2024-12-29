@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { track } from '@vercel/analytics';
 import docImg from '../../assets/doc4.webp';
@@ -19,6 +20,9 @@ const General = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <Helmet>
+        6       <link rel="preload" as="image" href={docImg} />
+        7   </Helmet>
             {/* Header */}
             <header className="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
