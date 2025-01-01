@@ -129,7 +129,7 @@ const ThankYouPage = () => {
             className="text-center"
           >
             <p className="text-gray-600 mb-6">
-              Need help? Our support team is between 6AM - 8PM EST Daily
+              If you don't receive an email within 10 mins, please contact us at support@healthbridgedirect.org
             </p>
             <div className="space-x-4">
               <button
@@ -145,12 +145,6 @@ const ThankYouPage = () => {
           </motion.div>
         </div>
       </div>
-
-      <footer className="md:absolute md:bottom-0 w-screen bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2023 HealthBridge. All rights reserved.</p>
-        </div>
-      </footer>
 
       <Helmet>
         <script src="https://salesiq.zoho.com/widget" type="text/javascript" defer></script>
