@@ -15,7 +15,12 @@ const Work = () => {
     const handleCtaClick = () => {
         track('cta-click');
 
-        window.location.href = "/form/w";
+        const randomNumber = Math.random();
+        if (randomNumber < 0.5) {
+            window.location.href = "/form/w#banner";
+        } else {
+            window.location.href = "/form/w";
+        }
     }
 
     return (

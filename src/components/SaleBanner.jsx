@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Cookies from 'js-cookie';
 
 const SaleBanner = () => {
-    const [timeLeft, setTimeLeft] = useState(420); // 7 minutes in seconds
+    const initialTime = parseInt(Cookies.get('timeLeft') || '420', 10); // 7 minutes in seconds
+    const [timeLeft, setTimeLeft] = useState(initialTime);
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
         if (timeLeft > 0) {
             const timer = setInterval(() => {
-                setTimeLeft(prev => prev - 1);
+                setTimeLeft(prev => {
+                    const newTime = prev - 1;
+                    Cookies.set('timeLeft', newTime);
+                    return newTime;
+                });
             }, 1000);
             return () => clearInterval(timer);
         } else {
             setIsVisible(false);
+            Cookies.remove('timeLeft');
         }
     }, [timeLeft]);
 
