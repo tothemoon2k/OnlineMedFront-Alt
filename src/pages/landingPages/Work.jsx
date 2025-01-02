@@ -15,7 +15,7 @@ const Work = () => {
     const handleCtaClick = () => {
         track('cta-click');
 
-        window.location.href = "/form/w"
+        window.location.href = "/form/w";
     }
 
     return (
