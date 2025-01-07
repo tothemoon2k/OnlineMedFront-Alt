@@ -11,6 +11,8 @@ import Terms from "./pages/legal/Terms";
 import Privacy from "./pages/legal/Privacy";
 import HipaaConsent from "./pages/legal/HipaaConsent";
 import TelehealthConsent from "./pages/legal/TelehealthConsent";
+import Heyflow from "./pages/Heyflow";
+import VerificationRequest from "./pages/VerificationRequest";
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/hipaa-consent" element={<HipaaConsent />} />
         <Route path="/telehealth-consent" element={<TelehealthConsent />} />
+        <Route path="/heyflow" element={<Heyflow />} />
+        <Route path="/verification-request" element={<VerificationRequest />} />
       </Routes>
       <Analytics />
     </Router>

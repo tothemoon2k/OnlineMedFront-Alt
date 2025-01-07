@@ -3,17 +3,12 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 import { Helmet } from 'react-helmet';
+import SupportModal from '../components/SupportModal';
 
 const ThankYouPage = () => {
+  const [showSupportModal, setShowSupportModal] = useState(false);
+  const [supportType, setSupportType] = useState('chat');
   const navigate = useNavigate();
-
-  // Simulated order details - in real app, get from order context/props
-  const orderDetails = {
-    orderNumber: "DN" + Math.floor(Math.random() * 1000000),
-    estimatedDelivery: "10 minutes",
-    email: "customer@example.com"
-  };
-
   useEffect(() => {
     // Scroll to top on component mount
     window.scrollTo(0, 0);
@@ -29,9 +24,9 @@ const ThankYouPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white">
       {/* Success Message Section */}
-        <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24">
+      <div className="flex-grow max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:py-24">
         <div className="text-center">
           <motion.div
             initial={{ scale: 0 }}
@@ -120,51 +115,42 @@ const ThankYouPage = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Support Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="text-center"
-          >
-            <p className="text-gray-600 mb-6">
-              Need help? Our support team is between 6AM - 8PM EST Daily
-            </p>
-            <div className="space-x-4">
-              <button
-                onClick={() => window.location.href = 'mailto:support@healthbridgedirect.org'}
-                className="inline-flex items-center text-blue-600 hover:text-blue-700"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Email Support
-              </button>
-            </div>
-          </motion.div>
         </div>
       </div>
 
-      <footer className="md:absolute md:bottom-0 w-screen bg-gray-900 text-white py-8">
+      <>
+        {/* Floating Support Button */}
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 1.5 }}
+          onClick={() => setShowSupportModal(true)}
+          className="fixed bottom-32 right-6 bg-white text-gray-800 rounded-full px-6 py-4 shadow-lg hover:shadow-xl transition-all flex items-center space-x-3 border border-gray-100 group"
+        >
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span className="font-medium">Questions? We're here to help</span>
+          <svg
+            className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </motion.button>
+
+        {/* Support Modal */}
+        <SupportModal
+          isOpen={showSupportModal}
+          onClose={() => setShowSupportModal(false)}
+        />
+      </>
+
+      <footer className="w-full bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2023 HealthBridge. All rights reserved.</p>
         </div>
       </footer>
-
-      <Helmet>
-        <script src="https://salesiq.zoho.com/widget" type="text/javascript" defer></script>
-        <script type="text/javascript">
-          {`
-            var $zoho=$zoho || {};
-            $zoho.salesiq = $zoho.salesiq || {
-              widgetcode: "siq5a6cf580d3ad81c6a37caad31055158cd9d3b632df9ee72723236d99d3276ea3",
-              values: {},
-              ready: function(){}
-            };
-          `}
-        </script>
-      </Helmet>
     </div>
   );
 };
