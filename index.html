@@ -1,39 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/favi.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealthBridge</title>
 
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=ranade@100,300,400,500,700&f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5NGVRGFV');</script>
-      <!-- End Google Tag Manager -->
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="/favi.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthBridge</title>
 
-    <script type="text/javascript">
-      window._mfq = window._mfq || [];
-      (function() {
-        var mf = document.createElement("script");
-        mf.type = "text/javascript"; mf.defer = true;
-        mf.src = "//cdn.mouseflow.com/projects/c542907f-1b51-4bed-bbed-a924d6eea815.js";
-        document.getElementsByTagName("head")[0].appendChild(mf);
-      })();
-    </script>
+  <link
+    href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=ranade@100,300,400,500,700&f[]=clash-display@400,500,600,700&display=swap"
+    rel="stylesheet">
 
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NGVRGFV"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5NGVRGFV');</script>
+  <!-- End Google Tag Manager -->
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <script type='text/javascript'>
+    window.smartlook || (function (d) {
+      var o = smartlook = function () { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
+      var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
+      c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
+    })(document);
+    smartlook('init', '314d238fd4188fa66609b59a77a1635f62ef0e6d', { region: 'eu' });
+  </script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NGVRGFV" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
