@@ -36,7 +36,7 @@ const General = () => {
                         </div>
                     </div>
 
-                    <button className='flex gap-2 items-center py-3 px-5 border-gray-600 border-2 rounded-lg'>
+                    <button className='hidden md:flex gap-2 items-center py-3 px-5 border-gray-600 border-2 rounded-lg'>
                         <img className='h-6' src="https://img.icons8.com/ios/50/phone--v1.png" alt="" />
                         469-587-6315
                     </button>  
