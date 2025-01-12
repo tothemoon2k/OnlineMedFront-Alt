@@ -4,7 +4,7 @@ import { Widget } from '@typeform/embed-react';
 const Work = () => {
     return (
         <div className='w-screen h-screen flex flex-col justify-center items-center'>
-            <Widget id="RPdN2fCw" style={{ width: '100%', height: '100%' }} className="my-form" />
+            <Widget id="cYXZl9yn" style={{ width: '100%', height: '100%' }} className="my-form" />
         </div>
     );
 };
