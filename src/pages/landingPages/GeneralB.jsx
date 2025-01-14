@@ -5,7 +5,7 @@ import { track } from '@vercel/analytics';
 import docImg from '../../assets/doc4.webp';
 import ReviewSection from '../../components/ReviewSection';
 
-const General = () => {
+const GeneralB = () => {
     const reviewAvatars = [
         "https://pbs.twimg.com/profile_images/909523370940780545/UOAjh5Vq_400x400.jpg",
         "https://pbs.twimg.com/profile_images/1783877005832056832/L53JJgMP_400x400.jpg",
@@ -14,7 +14,11 @@ const General = () => {
     ];
 
     const handleCtaClick = () => {
-        track('cta-click');
+        track('cta-click',
+            {
+                location: 'b',
+            }
+        );
 
         window.location.href = "/form/w";
     }
@@ -22,8 +26,8 @@ const General = () => {
     return (
         <div className="min-h-screen bg-white">
             <Helmet>
-        6       <link rel="preload" as="image" href={docImg} />
-        7   </Helmet>
+                6       <link rel="preload" as="image" href={docImg} />
+                7   </Helmet>
             {/* Header */}
             <nav className={`w-full h-10 flex items-center justify-between px-6 md:px-32 py-10`}>
                 <div className='flex justify-between w-full'>
@@ -113,7 +117,7 @@ const General = () => {
                             Get Your Doctor's Note in Minutes, Not Hours
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Fast, easy, and accepted by employers and schools nationwide. 
+                            Fast, easy, and accepted by employers and schools nationwide.
                         </p>
                     </div>
 
@@ -692,4 +696,4 @@ const General = () => {
     );
 }
 
-export default General;
+export default GeneralB;
