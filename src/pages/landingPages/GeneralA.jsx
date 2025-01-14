@@ -64,7 +64,7 @@ const GeneralA = () => {
                         >
                             <div className="space-y-8"> {/* Content group with spacing */}
                                 <h1 className="text-[3.5rem] font-bold text-gray-900 sm:text-5xl md:text-6xl leading-tight">
-                                    Get a Verifiable Doctor's Note in <span className="text-blue-600 border-b-4 border-blue-300">Under 10 Mins</span>
+                                    Get a Real Doctor's Note Fast in <span className="text-blue-600 border-b-4 border-blue-300">Under 10 Mins</span>
                                 </h1>
                                 <p className="text-xl text-gray-600 leading-relaxed">
                                     Licensed healthcare providers offering real, verifiable excuse notes for workers and students. Quick, reliable, and hassle-free.
