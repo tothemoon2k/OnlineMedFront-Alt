@@ -49,60 +49,6 @@ const SupportModal = ({ isOpen, onClose }) => {
           </div>
 
           <div className="space-y-4">
-            {/* Live Chat */}
-            <button
-              disabled={!isOfficeOpen}
-              onClick={() => isOfficeOpen && window.open('https://support.chat.url')}
-              className={`w-full flex items-center justify-between p-4 rounded-lg transition-colors ${
-                isOfficeOpen ? 'bg-blue-50 hover:bg-blue-100' : 'bg-gray-100 cursor-not-allowed'
-              }`}
-            >
-              <div className="flex items-center">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
-                  isOfficeOpen ? 'bg-blue-100' : 'bg-gray-200'
-                }`}>
-                  <svg className={`w-6 h-6 ${isOfficeOpen ? 'text-blue-600' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-                <div className="text-left">
-                  <div className={`font-semibold ${!isOfficeOpen && 'text-gray-400'}`}>Live Chat</div>
-                  <div className="text-sm text-gray-500">
-                    {isOfficeOpen ? 'Available now • <1 min wait' : 'Available 8 AM - 10 PM EST'}
-                  </div>
-                </div>
-              </div>
-            </button>
-
-            {/* Phone Support */}
-            <button
-              disabled={!isOfficeOpen}
-              onClick={() => {
-                if (isOfficeOpen) {
-                  window.location.href = `tel:${SUPPORT_PHONE}`;
-                }
-              }}
-              className={`w-full flex items-center justify-between p-4 rounded-lg transition-colors ${
-                isOfficeOpen ? 'bg-green-50 hover:bg-green-100' : 'bg-gray-100 cursor-not-allowed'
-              }`}
-            >
-              <div className="flex items-center">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
-                  isOfficeOpen ? 'bg-green-100' : 'bg-gray-200'
-                }`}>
-                  <svg className={`w-6 h-6 ${isOfficeOpen ? 'text-green-600' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div className="text-left">
-                  <div className={`font-semibold ${!isOfficeOpen && 'text-gray-400'}`}>Phone Support</div>
-                  <div className="text-sm text-gray-500">
-                    {isOfficeOpen ? formatPhoneNumber(SUPPORT_PHONE) : 'Available 8 AM - 10 PM EST'}
-                  </div>
-                </div>
-              </div>
-            </button>
-
             {/* Email Support - Always Available */}
             <button
               onClick={() => window.location.href = `mailto:${SUPPORT_EMAIL}`}
@@ -122,6 +68,42 @@ const SupportModal = ({ isOpen, onClose }) => {
               <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
+            </button>
+
+            {/* Live Chat */}
+            <button
+              disabled={true}
+              className="w-full flex items-center justify-between p-4 rounded-lg transition-colors bg-gray-100 cursor-not-allowed"
+            >
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-gray-200">
+                  <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-gray-400">Live Chat</div>
+                  <div className="text-sm text-gray-500">Currently unavailable</div>
+                </div>
+              </div>
+            </button>
+
+            {/* Phone Support */}
+            <button
+              disabled={true}
+              className="w-full flex items-center justify-between p-4 rounded-lg transition-colors bg-gray-100 cursor-not-allowed"
+            >
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-gray-200">
+                  <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-gray-400">Phone Support</div>
+                  <div className="text-sm text-gray-500">Currently unavailable</div>
+                </div>
+              </div>
             </button>
           </div>
 
