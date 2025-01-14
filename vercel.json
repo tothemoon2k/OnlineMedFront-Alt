@@ -8,6 +8,8 @@
       { "src": "/terms", "dest": "/" },
       { "src": "/privacy-policy", "dest": "/" },
       { "src": "/hipaa-consent", "dest": "/" },
-      { "src": "/telehealth-consent", "dest": "/" }
+      { "src": "/telehealth-consent", "dest": "/" },
+      { "src": "/b", "dest": "/" },
+      { "src": "/a", "dest": "/" }
     ]
 }
