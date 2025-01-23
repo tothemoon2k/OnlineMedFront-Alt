@@ -14,6 +14,7 @@ import HipaaConsent from "./pages/legal/HipaaConsent";
 import TelehealthConsent from "./pages/legal/TelehealthConsent";
 import Heyflow from "./pages/Heyflow";
 import VerificationRequest from "./pages/VerificationRequest";
+import Refund from "./pages/legal/Refund";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/refund" element={<Refund />} />
         <Route path="/hipaa-consent" element={<HipaaConsent />} />
         <Route path="/telehealth-consent" element={<TelehealthConsent />} />
         <Route path="/heyflow" element={<Heyflow />} />

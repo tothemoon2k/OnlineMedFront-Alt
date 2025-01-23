@@ -737,6 +737,11 @@ const GeneralA = () => {
             <footer className="bg-gray-900 text-white py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <p>&copy; 2023 HealthBridge. All rights reserved.</p>
+                    <div className="mt-4">
+                        <a href="/terms" className="text-white hover:underline mx-2">Terms of Service</a>
+                        <a href="/privacy-policy" className="text-white hover:underline mx-2">Privacy Policy</a>
+                        <a href="/refund" className="text-white hover:underline mx-2">Refund Policy</a>
+                    </div>
                 </div>
             </footer>
         </div>

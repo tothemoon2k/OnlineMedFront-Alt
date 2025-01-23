@@ -10,6 +10,7 @@
       { "src": "/hipaa-consent", "dest": "/" },
       { "src": "/telehealth-consent", "dest": "/" },
       { "src": "/b", "dest": "/" },
-      { "src": "/a", "dest": "/" }
+      { "src": "/a", "dest": "/" },
+      { "src": "/refund", "dest": "/" }
     ]
 }
